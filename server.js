@@ -12,7 +12,7 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
-const { initialize, checkAuthenticated } = require('./helpers/auth')
+const { initialize, checkAuthenticated, checkNotAuthenticated } = require('./helpers/auth')
 
 initialize(passport)
 
@@ -43,7 +43,9 @@ app.use('/logout', logoutRoutes)
 const articleRoutes = require('./routes/articles')
 app.use('/articles', articleRoutes)
 
+const landingPageRoutes = require('./routes/landingPage')
+app.use('/landingPage', landingPageRoutes)
 
-app.get('/', checkAuthenticated, (req, res) => { res.redirect('/articles') })
+app.get('/', checkNotAuthenticated, (req, res) => { res.redirect('/landingPage') })
 
 app.listen(PORT, () => console.log(`server started at port ${PORT}`))

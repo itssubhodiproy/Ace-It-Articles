@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="text" style="padding:4px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/3003/3003035.png" alt="">
+            <h3>
+                <%= user.name %>
+            </h3>
+            <p>
+                <%= user.role %>
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                quis nostrud exercitation ullamco laboris nisi ut.
+                You're gonna rock it!
+            </p>
+        </div>
+        <div class="links">
+            <a target="_blank" href=""><i class="fab fa-codepen"></i></a>
+            <a target="_blank" href=""><i class="fab fa-github"></i></a>
+            <a target="_blank" href=""><i class="fab fa-youtube"></i></a>
+        </div>
+        <a href="/articles"><button class="button">Go back</button></a>
+    </div>
+
+</body>
+
+</html>

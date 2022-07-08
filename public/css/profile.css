@@ -1,0 +1,78 @@
+/* https://www.youtube.com/watch?v=NuYMMNK4wzA */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+}
+
+.card .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .text img {
+  height: 170px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .text h3 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.card .text p:nth-of-type(1) {
+  color: #8886ff;
+  font-size: 15px;
+  margin-top: -5px;
+}
+
+.card .text p:nth-of-type(2) {
+  margin: 10px;
+  width: 90%;
+  text-align: center;
+}
+
+.card .links {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card .links i {
+  color: #8886ff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card .links i:hover {
+  color: #8886ff;
+}
+.button {
+  margin: 18px;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #8886ff;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}

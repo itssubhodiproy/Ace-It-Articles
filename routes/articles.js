@@ -3,7 +3,7 @@ const Article = require('../models/article')
 const router = express.Router()
 const { checkAuthenticated } = require('../helpers/auth')
 const Users = require('../models/Users')
-
+//main article page
 router.get('/', checkAuthenticated, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
   const role = req.user.role
@@ -12,46 +12,37 @@ router.get('/', checkAuthenticated, async (req, res) => {
   }
   res.render('articles/index', { articles: articles })
 })
-
+//for profile page
+router.get('/profile', checkAuthenticated, (req, res) => {
+  res.render("articles/profile", { user: req.user });
+});
+//new article
 router.get('/new', checkAuthenticated, (req, res) => {
   res.render('articles/new', { article: new Article() })
 })
-
+//get edit form with specific id
 router.get('/edit/:id', checkAuthenticated, async (req, res) => {
   const article = await Article.findById(req.params.id)
   res.render('articles/edit', { article: article })
 })
-
+//get specific article
 router.get('/:slug', checkAuthenticated, async (req, res) => {
   const article = await Article.findOne({ slug: req.params.slug })
   if (article == null) return res.redirect('/')
   const role = req.user.role
   res.render('articles/show', { article: article, role })
 })
-
-// router.get('/myarticle', (req, res) => {
-//   // const articleArr = req.user.articleId
-//   // console.log(articleArr)
-//   // const articles = [];
-//   // for (let i = 0; i < articleArr.length; i++) {
-//   //   const singleArticle = await Article.findById(articleArr[i]);
-//   //   if (singleArticle) articles.push(singleArticle);
-//   // }
-//   // res.render('articles/myarticle', { articles: articles })
-  
-//     res.send("success");
-// })
-
+//create new article
 router.post('/', checkAuthenticated, async (req, res, next) => {
   req.article = new Article()
   next()
 }, saveArticleAndRedirect('new'))
-
+//edit article
 router.put('/:id', checkAuthenticated, async (req, res, next) => {
   req.article = await Article.findById(req.params.id)
   next()
 }, saveArticleAndRedirect('edit'))
-
+//delete article
 router.delete('/:id', checkAuthenticated, async (req, res) => {
   await Article.findByIdAndDelete(req.params.id)
   res.redirect('/')
