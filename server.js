@@ -1,4 +1,4 @@
-// Enternal Files and Module
+// Enternal Files and Moduless
 const express = require('express')
 const mongoose = require('mongoose')
 const Article = require('./models/article')
