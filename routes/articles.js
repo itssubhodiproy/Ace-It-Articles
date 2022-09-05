@@ -10,15 +10,16 @@ router.get('/', checkAuthenticated, async (req, res) => {
   if (role === 'admin') {
     return res.render('articles/adminindex', { articles: articles })
   }
-  res.render('articles/index', { articles: articles})
+  res.render('articles/index', { articles: articles })
 })
 //for profile page
 router.get('/profile', checkAuthenticated, (req, res) => {
   res.render("articles/profile", { user: req.user });
 });
-router.get('/profile/:id', checkAuthenticated, async(req, res) => {
-  //if I'm visiting my profile via my articles
-  if(req.params.id==req.user._id){
+// users can visit every other user's profile page
+router.get('/profile/:id', checkAuthenticated, async (req, res) => {
+  //if I'm visiting my profile via my articles (Edgecase)
+  if (req.params.id == req.user._id) {
     return res.redirect('/articles/profile')
   }
   const user = await Users.findById(req.params.id)
