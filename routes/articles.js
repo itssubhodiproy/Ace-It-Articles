@@ -10,11 +10,19 @@ router.get('/', checkAuthenticated, async (req, res) => {
   if (role === 'admin') {
     return res.render('articles/adminindex', { articles: articles })
   }
-  res.render('articles/index', { articles: articles })
+  res.render('articles/index', { articles: articles})
 })
 //for profile page
 router.get('/profile', checkAuthenticated, (req, res) => {
   res.render("articles/profile", { user: req.user });
+});
+router.get('/profile/:id', checkAuthenticated, async(req, res) => {
+  //if I'm visiting my profile via my articles
+  if(req.params.id==req.user._id){
+    return res.redirect('/articles/profile')
+  }
+  const user = await Users.findById(req.params.id)
+  res.render("articles/profile", { user: user });
 });
 //new article
 router.get('/new', checkAuthenticated, (req, res) => {
@@ -54,6 +62,8 @@ function saveArticleAndRedirect(path) {
     article.title = req.body.title
     article.description = req.body.description
     article.markdown = req.body.markdown
+    article.ownerId = req.user._id
+    article.ownerName = req.user.name
     try {
       article = await article.save()
       res.redirect(`/articles/${article.slug}`)
