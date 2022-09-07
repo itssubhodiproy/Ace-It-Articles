@@ -6,7 +6,7 @@ const Users = require('../models/Users')
 //main article page
 router.get('/', checkAuthenticated, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
-  const role = req.user.role
+  // const role = req.user.role
   // if (role === 'admin') {
   //   return res.render('articles/adminindex', { articles: articles })
   // }
@@ -32,7 +32,12 @@ router.get('/new', checkAuthenticated, (req, res) => {
 //get edit form with specific id
 router.get('/edit/:id', checkAuthenticated, async (req, res) => {
   const article = await Article.findById(req.params.id)
-  res.render('articles/edit', { article: article })
+  //article edit and delete only for owner and delete for admin
+  const articleOwnerId = article.ownerId;
+  if (article.ownerId == req.user._id || req.user.role == 'admin') {
+    return res.render('articles/edit', { article: article })
+  }
+  res.send('You are not the owner of this article neither an admin')
 })
 //get specific article
 router.get('/:slug', checkAuthenticated, async (req, res) => {
