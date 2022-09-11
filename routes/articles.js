@@ -6,10 +6,6 @@ const Users = require('../models/Users')
 //main article page
 router.get('/', checkAuthenticated, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
-  // const role = req.user.role
-  // if (role === 'admin') {
-  //   return res.render('articles/adminindex', { articles: articles })
-  // }
   res.render('articles/index', { articles: articles, user: req.user })
 })
 //for profile page
