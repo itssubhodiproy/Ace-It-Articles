@@ -1,16 +1,46 @@
-<div class="form-group">
-  <label for="title">Title</label>
-  <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
+<!-- title and image Upload -->
+<div class="grid gap-6 mb-2 md:grid-cols-2 mt-4">
+  <div>
+    <div>
+      <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title/Headline</label>
+      <input name="title" type="text" id="title"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="John" required>
+      <%= article.title %>
+    </div>
+    <!-- description section -->
+    <div class="mt-6">
+      <label for="description"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Description</label>
+      <input name="description" type="text" id="description"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="This is world's first article" required>
+      <%=article.description %>
+    </div>
+  </div>
+  <div>
+    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">Upload image (Max-size: 2mb/ jpg-png-jpeg)</label>
+    <input name="cover"
+      class="filepond block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+      aria-describedby="file_input_help" id="file_input" type="file" accept="image/png, image/jpeg, image/jpg" data-max-file-size="2MB"/>
+    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">
+    </p>
+    <%= article.coverImage %>
+  </div>
 </div>
-<div class="form-group">
-  <label for="description">Description</label>
-  <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
+
+<!-- markdown section -->
+<div class="mb-6">
+  <label for="markdown" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Markdown</label>
+  <textarea name="markdown" id="markdown" rows="4"
+    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    placeholder="This is world's first article" required></textarea>
+  <%=article.markdown %>
 </div>
-<div class="form-group">
-  <label for="markdown">Markdown</label>
-  <textarea required name="markdown" id="markdown" class="form-control" rows="10"><%= article.markdown %></textarea>
-</div>
-<div class="text-right">
-<a href="/" class="btn btn-secondary">Cancel</a>
-<button type="submit" class="btn btn-primary">Save</button>
+<!-- button section -->
+<div class="flex items-center justify-end">
+  <button type="button" onclick="location.href='/'"
+    class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
+  <button type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Post</button>
 </div>
