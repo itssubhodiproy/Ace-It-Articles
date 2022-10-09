@@ -39,6 +39,7 @@ html, body {
 }
 .content .poster .poster-title {
   position: absolute;
+  text-shadow: 2px 2px #050505;
   bottom: 40px;
   left: 40px;
   width: 40%;
