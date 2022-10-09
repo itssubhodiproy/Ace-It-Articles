@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="/css/demoViewStyle.css">
 </head>
 
@@ -14,7 +15,13 @@
         <!-- <div class="scroll-indicator"></div> -->
         <div class="content-wrapper">
             <div class="content">
-                <div style="background:center no-repeat url(<%=article.coverImagePath%>);background-size:cover" class="poster">
+                <div style="background:center no-repeat url(<%=article.coverImagePath%>);background-size:cover;position: relative; right: 0px;"
+                    class="poster">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-arrow-left" onclick="location.href='/articles'"
+                            style="color:white; font-size: 25px;padding: 15px;cursor: pointer;"></i>
+                    </div>
+
                     <div class="poster-title">
                         <h1>
                             <%= article.title %>
@@ -25,8 +32,9 @@
                         </p>
                     </div>
                     <div class="poster-buttons">
-                        <div href='/articles/delete/<%= article.id %>'><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <div href='/articles/delete/<%= article.id %>'><svg viewBox="0 0 24 24" width="24" height="24"
+                                stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round" class="css-i6dzq1">
                                 <path
                                     d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                                 </path>
@@ -63,24 +71,26 @@
                     <p>
                         <%- article.sanitizedHtml %>
                     </p>
-                <div class="author">
-                    <div class="image"></div>
+                    <div class="author">
+                        <div class="image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="content">
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt
+                        eveniet
+                        eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio exercitationem rerum,
+                        molestias aliquid ipsa excepturi laborum quaerat! Tempora necessitatibus</div>
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt
+                        eveniet
+                        eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio exercitationem rerum,
+                        molestias aliquid ipsa excepturi laborum quaerat! Tempora necessitatibus</div>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="content">
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet
-                    eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio exercitationem rerum,
-                    molestias aliquid ipsa excepturi laborum quaerat! Tempora necessitatibus</div>
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet
-                    eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio exercitationem rerum,
-                    molestias aliquid ipsa excepturi laborum quaerat! Tempora necessitatibus</div>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
