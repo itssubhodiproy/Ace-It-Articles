@@ -20,7 +20,7 @@ router.post('/', checkNotAuthenticated, async (req, res) => {
             name: req.body.name,
             username: req.body.username,
             password: hashedPassword,
-            role: req.body.role,
+            role: 'user',
             userImage: userImageRandom
         })
         res.redirect('/login')
