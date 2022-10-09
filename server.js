@@ -14,7 +14,7 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 const { initialize, checkAuthenticated, checkNotAuthenticated } = require('./helpers/auth')
-app.use(bodyParser.urlencoded({ limit: '1mb', extended: false }))
+app.use(bodyParser.urlencoded({ limit: '4mb', extended: false }))
 
 initialize(passport)
 
