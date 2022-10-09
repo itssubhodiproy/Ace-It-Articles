@@ -1,5 +1,4 @@
-
-
+// using filepond we can easily upload files to the server by drag and drop
 FilePond.registerPlugin(
   FilePondPluginImagePreview,
   FilePondPluginImageResize,
@@ -15,9 +14,6 @@ FilePond.setOptions({
   imagePreviewHeight: 100,
   imagePreviewWidth: 150,
   stylePanelAspectRatio: 3 / 10,
-  // stylePanelLayout: 'compact circle',
-  // imageResizeTargetWidth: coverWidth,
-  // imageResizeTargetHeight: coverHeight,
   imageResizeTargetWidth: 150,
   imageResizeTargetHeight: 100
 })

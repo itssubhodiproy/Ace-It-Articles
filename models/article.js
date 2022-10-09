@@ -39,15 +39,14 @@ const articleSchema = new mongoose.Schema({
     required: true
   },
   ownerImage:{
-    type: String
+    type: String,
+    required: true
   },
   coverImage: {
     type: Buffer,
-    // required: true
   },
   coverImageType: {
     type: String,
-    // required: true
   },
 })
 
