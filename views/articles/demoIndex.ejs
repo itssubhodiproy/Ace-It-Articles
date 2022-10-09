@@ -20,28 +20,10 @@
 </head>
 
 <body>
-  <!-- <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <i class="fa-sharp fa-solid fa-blog fa-2x text-blue-400"></i>
-        <span class="ml-3 text-2xl text-blue-400">Ace-It</span>
-      </a>
-      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900">First Link</a>
-        <a class="mr-5 hover:text-gray-900">Second Link</a>
-        <a class="mr-5 hover:text-gray-900">Third Link</a>
-        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
-      </nav>
-      <button onclick="location.href='/articles/profile'" class="relative" type="button" style="outline-style:none;">
-        <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user">
-      </button>
-    </div>
-
-  </header> -->
-
+  <!-- navbar -->
   <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 mx-auto container">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <a href="https://flowbite.com/" class="flex items-center">
+      <a href="#" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Ace-It</span>
       </a>
@@ -50,32 +32,29 @@
           id=" user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
           data-dropdown-placement="bottom" style="outline-style: none;">
           <span class="sr-only">Open user menu</span>
+          <!-- userprofile -->
           <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user photo">
         </button>
-        <!-- Dropdown menu -->
+        <!-- User Dropdown menu -->
         <div
           class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
           id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
           style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 443.636px, 0px);">
           <div class="py-3 px-4">
-            <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-            <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+            <span class="block text-sm text-gray-900 dark:text-white">
+              <%= user.name %>
+            </span>
+            <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">
+              <%= user.username %>
+            </span>
           </div>
           <ul class="py-1" aria-labelledby="user-menu-button">
             <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+              <a onclick="location.href='/articles/profile'"
+                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-            </li>
-            <li>
-              <a href="#"
+              <a onclick="location.href='/logout'"
                 class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
                 out</a>
             </li>
@@ -130,7 +109,7 @@
         <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">recent posts </h1>
         <div class="flex items-center ">
           <button type="button" onclick="location.href='/articles/new/'"
-            class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
             <i class="fa-sharp fa-solid fa-plus"></i>
             New
           </button>
@@ -140,65 +119,34 @@
 
 
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        <% for(var i=0;i<articles.length;i++) {%>
+        <% for(let i=0;i<articles.length;i++) {%>
           <div>
             <!-- article image -->
             <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-              src="<%= articles[i].coverImagePath %>" alt="">
-            <!-- src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" -->
+              src="<%= articles[i].coverImagePath %>" alt="Banner Image">
             <div class="mt-8">
               <!-- article category and button -->
               <div class="flex items-center justify-between mt-4">
-                <span class="text-blue-500 uppercase">category</span>
-                <div href="#" class="inline-block text-blue-500 underline hover:text-blue-400">
-
-                  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    type="button">
-                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                      </path>
-                    </svg>
-                  </button>
-
-                  <!-- Dropdown menu -->
-                  <div id="dropdownDots"
-                    class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
-                      <li>
-                        <a href="#"
-                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bookmark
-                          this</a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Delete</a>
-                      </li>
-                    </ul>
-                    <div class="py-1">
-                      <a href="#"
-                        class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Report</a>
-                    </div>
-                  </div>
-
+                <div class="text-3xl font-semibold text-gray-800 dark:text-white">
+                  <%= articles[i].title %>
                 </div>
+                
+                <% if(articles[i].ownerId==user._id) {%>                  
+                    <div href="#" class="flex justify-between">
+                      <div class="px-2 cursor-pointer" onclick="location.href='/articles/delete/<%= articles[i].id %>'"><i class="fa-solid fa-trash"></i></div>
+                      <div class="px-2 cursor-pointer" onclick="location.href='/articles/edit/<%= articles[i].id %>'"><i class="fa-solid fa-pen-to-square"></i></div>
+                    </div>
+                <% } %>
+                <% if(articles[i].ownerId!=user._id && user.role == 'admin') {%>                  
+                  <div href="#" class="flex justify-between">
+                    <div class="px-2 cursor-pointer" onclick="location.href='/articles/delete/<%= articles[i].id %>'"><i class="fa-solid fa-trash"></i></div>
+                  </div>
+              <% } %>
               </div>
 
-              <!-- article title -->
-              <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
-                <!-- What do you want to know about UI -->
-                <%= articles[i].title %>
-              </h1>
+
               <!-- article descrtiption -->
               <p class="mt-2 text-gray-500 dark:text-gray-400">
-                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
-                recusandae nulla veritatis id tempore sapiente -->
                 <%= articles[i].description %>
               </p>
               <div class="flex items-center justify-between mt-4">

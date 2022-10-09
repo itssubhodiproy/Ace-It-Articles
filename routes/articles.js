@@ -42,7 +42,7 @@ router.get('/:slug', checkAuthenticated, async (req, res) => {
   const article = await Article.findOne({ slug: req.params.slug })
   if (article == null) return res.redirect('/')
   const role = req.user.role
-  res.render('articles/show', { article: article, role })
+  res.render('articles/demoView', { article: article, role })
 })
 //create new article
 router.post('/', checkAuthenticated, async (req, res, next) => {
@@ -55,7 +55,7 @@ router.put('/:id', checkAuthenticated, async (req, res, next) => {
   next()
 }, saveArticleAndRedirect('edit'))
 //delete article
-router.delete('/:id', checkAuthenticated, async (req, res) => {
+router.get('/delete/:id', checkAuthenticated, async (req, res) => {
   await Article.findByIdAndDelete(req.params.id)
   res.redirect('/')
 })
