@@ -36,7 +36,7 @@
           data-dropdown-placement="bottom" style="outline-style: none;">
           <span class="sr-only">Open user menu</span>
           <!-- userprofile -->
-          <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user photo">
+          <img class="w-10 h-10 rounded-full" src="<%= user.userImage %>" alt="user photo">
         </button>
         <!-- User Dropdown menu -->
         <div
@@ -108,7 +108,7 @@
   <!-- main content -->
   <section class="bg-white dark:bg-gray-900">
     <div class="container px-6 py-10 mx-auto">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between mb-10">
         <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">recent posts </h1>
         <div class="flex items-center ">
           <button type="button" onclick="location.href='/articles/new/'"
@@ -157,7 +157,7 @@
                   <!-- article owner profile picture -->
                   <button class="relative" onclick="location.href='/articles/profile/<%= articles[i].ownerId %>'"
                     style="outline-style:none;">
-                    <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user">
+                    <img class="w-10 h-10 rounded-full" src="<%= articles[i].ownerImage %> " alt="user">
                   </button>
                   <div class="ml-3">
                     <!-- article owner name -->

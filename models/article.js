@@ -38,6 +38,9 @@ const articleSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  ownerImage:{
+    type: String
+  },
   coverImage: {
     type: Buffer,
     // required: true

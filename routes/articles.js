@@ -68,6 +68,7 @@ function saveArticleAndRedirect(path) {
     article.markdown = req.body.markdown
     article.ownerId = req.user._id
     article.ownerName = req.user.name
+    article.ownerImage = req.user.userImage
     saveCover(article, req.body.cover)
     try {
       article = await article.save()
