@@ -1,7 +1,7 @@
 
 # ACE-IT
 
-A one-stop destination to prepare for Technical and Coding interviews.
+Join Ace-It to share insights and gain knowledge from linkeminded people.
 
 <img src="/public/img/desktopLook.png"/>
 
