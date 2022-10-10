@@ -3,10 +3,12 @@ const Article = require('../models/article')
 const router = express.Router()
 const { checkAuthenticated } = require('../helpers/auth')
 const Users = require('../models/Users')
+const imageMimeTypes = ['image/jpeg', 'image/png', 'images/jpg']
+
 //main article page
 router.get('/', checkAuthenticated, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
-  res.render('articles/index', { articles: articles, user: req.user })
+  res.render('articles/demoIndex', { articles: articles, user: req.user })
 })
 //for profile page
 router.get('/profile', checkAuthenticated, (req, res) => {
@@ -30,7 +32,7 @@ router.get('/edit/:id', checkAuthenticated, async (req, res) => {
   const article = await Article.findById(req.params.id)
   //article edit and delete only for owner and delete for admin
   const articleOwnerId = article.ownerId;
-  if (article.ownerId == req.user._id || req.user.role == 'admin') {
+  if (article.ownerId == req.user._id) {
     return res.render('articles/edit', { article: article })
   }
   res.send('You are not the owner of this article neither an admin')
@@ -40,7 +42,7 @@ router.get('/:slug', checkAuthenticated, async (req, res) => {
   const article = await Article.findOne({ slug: req.params.slug })
   if (article == null) return res.redirect('/')
   const role = req.user.role
-  res.render('articles/show', { article: article, role })
+  res.render('articles/demoView', { article: article, role })
 })
 //create new article
 router.post('/', checkAuthenticated, async (req, res, next) => {
@@ -53,11 +55,11 @@ router.put('/:id', checkAuthenticated, async (req, res, next) => {
   next()
 }, saveArticleAndRedirect('edit'))
 //delete article
-router.delete('/:id', checkAuthenticated, async (req, res) => {
+router.get('/delete/:id', checkAuthenticated, async (req, res) => {
   await Article.findByIdAndDelete(req.params.id)
   res.redirect('/')
 })
-
+//save article and redirect
 function saveArticleAndRedirect(path) {
   return async (req, res) => {
     let article = req.article
@@ -66,12 +68,23 @@ function saveArticleAndRedirect(path) {
     article.markdown = req.body.markdown
     article.ownerId = req.user._id
     article.ownerName = req.user.name
+    article.ownerImage = req.user.userImage
+    saveCover(article, req.body.cover)
     try {
       article = await article.save()
       res.redirect(`/articles/${article.slug}`)
     } catch (e) {
       res.render(`articles/${path}`, { article: article })
     }
+  }
+}
+
+function saveCover(article, coverEncoded) {
+  if (coverEncoded == null) return
+  const cover = JSON.parse(coverEncoded)
+  if (cover != null && imageMimeTypes.includes(cover.type)) {
+    article.coverImage = new Buffer.from(cover.data, 'base64')
+    article.coverImageType = cover.type
   }
 }
 

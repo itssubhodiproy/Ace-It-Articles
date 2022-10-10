@@ -37,19 +37,33 @@ const articleSchema = new mongoose.Schema({
   ownerName:{
     type: String,
     required: true
-  }
+  },
+  ownerImage:{
+    type: String,
+    required: true
+  },
+  coverImage: {
+    type: Buffer,
+  },
+  coverImageType: {
+    type: String,
+  },
 })
 
 articleSchema.pre('validate', function(next) {
   if (this.title) {
     this.slug = slugify(this.title, { lower: true, strict: true })
   }
-
   if (this.markdown) {
     this.sanitizedHtml = dompurify.sanitize(marked(this.markdown))
   }
-
   next()
+})
+//for image post
+articleSchema.virtual('coverImagePath').get(function() {
+  if (this.coverImage != null && this.coverImageType != null) {
+    return `data:${this.coverImageType};charset=utf-8;base64,${this.coverImage.toString('base64')}`
+  }
 })
 
 module.exports = mongoose.model('Article', articleSchema)
