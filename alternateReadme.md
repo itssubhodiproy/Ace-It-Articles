@@ -85,7 +85,7 @@
 
 <div align="center">
   <a href="https://subh-ace-it.herokuapp.com">
-    <img src="/public/img/collageImage.png" alt="ArticlePage" width="500" height="333">
+    <img src="/public/img/collageImage.png" alt="ArticlePage" width="610" height="399">
   </a>
 </div>
 
@@ -99,7 +99,7 @@ Here's why:
 * Established multiple functionalities to support individual user contributions and an admin panel to issue the articles.
 * A simplier minimalistic user interface with 0 ads. 
 
-Of course, no one platform will serve all need of a creator since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Of course, no one platform will serve all need of a creator since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this project!
 
 _follow this `README.md` file for get started_
 
