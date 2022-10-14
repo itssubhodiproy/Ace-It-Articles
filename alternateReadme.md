@@ -42,7 +42,7 @@
     <a href="https://github.com/subh-23/Ace-It-Articles"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/subh-23/Ace-It-Articles">View Demo</a>
+    <a href="https://subh-ace-it.herokuapp.com">View Demo</a>
     ·
     <a href="https://github.com/subh-23/Ace-It-Articles/issues">Report Bug</a>
     ·
