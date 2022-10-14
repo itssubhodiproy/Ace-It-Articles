@@ -83,9 +83,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://subh-ace-it.herokuapp.com/landingPage)
+<div align="center">
+  <a href="https://subh-ace-it.herokuapp.com">
+    <img src="/public/img/collageImage.png" alt="ArticlePage" width="500" height="333">
+  </a>
+</div>
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+<br/>
+<br/>
+
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should implement DRY principles to the rest of your life :smile:
+
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+
+Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,10 +170,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Better user interface
+- [x] Post articles with images
+- [x] Permession based login with security
+    - [x] User can edit and delete their own articles
+    - [x] Admin can delete everyones articles
+    - [x] No any user can delete and edit other user's articles
+- [x] Random generated avatar
+- [ ] Include like and comment on each articles
+- [ ] Users can follow fellow users
+- [ ] Search Bar
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -195,9 +217,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+[Subhodip Roy](https://linkedin.com/in/subhodip-roy) - [@24_subh](https://twitter.com/23_subh) - subhodiproy281@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/subh_23/Ace-It-Articles](https://github.com/subh_23/Ace-It-Articles)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
