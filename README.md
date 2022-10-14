@@ -92,7 +92,7 @@
 <br/>
 <br/>
 
-There are many great BLOG platforms available out there; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a distributed free BLOG platform so amazing that it'll be the last one you ever need -- I think this is it.
+There are many great blog platforms available out there; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a distributed free blog platform so amazing that it'll be the last one you ever need. I think this is it.
 
 Here's why:
 * Developed a distributed platform to help individuals to share their knowledge with others with no additional subscription. 
