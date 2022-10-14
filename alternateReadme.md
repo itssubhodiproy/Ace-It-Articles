@@ -181,7 +181,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Users can follow fellow users
 - [ ] Search Bar
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/subh-23/Ace-It-Articles/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -208,7 +208,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,7 +217,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[Subhodip Roy](https://linkedin.com/in/subhodip-roy) - [@24_subh](https://twitter.com/23_subh) - subhodiproy281@gmail.com
+[Subhodip Roy](https://linkedin.com/in/subhodip-roy) - [@23_subh](https://twitter.com/23_subh) - subhodiproy281@gmail.com
 
 Project Link: [https://github.com/subh_23/Ace-It-Articles](https://github.com/subh_23/Ace-It-Articles)
 
@@ -228,9 +228,9 @@ Project Link: [https://github.com/subh_23/Ace-It-Articles](https://github.com/su
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Web Dev Simplified](https://github.com/WebDevSimplified)
+* [FlowBite](https://flowbite.com/)
+* [REST API](https://www.restapitutorial.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
