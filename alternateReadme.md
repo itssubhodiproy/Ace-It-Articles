@@ -31,22 +31,22 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/public/images/logo(1).png" alt="Logo" width="80" height="80">
+    <img src="/public/img/logo (2).svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Ace-It Articles</h3>
 
   <p align="center">
-    project_description
+    Share your valuable knowledge and experience with others
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/subh-23/Ace-It-Articles"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/subh-23/Ace-It-Articles">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/subh-23/Ace-It-Articles/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/subh-23/Ace-It-Articles/issues">Request Feature</a>
   </p>
 </div>
 
