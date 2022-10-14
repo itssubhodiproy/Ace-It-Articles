@@ -92,14 +92,12 @@
 <br/>
 <br/>
 
-There are many great blog platforms available out there; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a distributed free blog platform so amazing that it'll be the last one you ever need. I think this is it.
+Unlease your creativity with Ace-It Articles, minimal design, adfree and free limit of posting articles 
 
 Here's why:
 * Developed a distributed platform to help individuals to share their knowledge with others with no additional subscription. 
 * Established multiple functionalities to support individual user contributions and an admin panel to issue the articles.
 * A simplier minimalistic user interface with 0 ads. 
-
-Of course, no one platform will serve all need of a creator since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this project!
 
 _follow this `README.md` file for get started_
 
