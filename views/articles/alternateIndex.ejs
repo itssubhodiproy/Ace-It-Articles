@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <i class="fa-sharp fa-solid fa-blog fa-2x text-blue-400"></i>
+        <span class="ml-3 text-2xl text-blue-400">Ace-It</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">First Link</a>
+        <a class="mr-5 hover:text-gray-900">Second Link</a>
+        <a class="mr-5 hover:text-gray-900">Third Link</a>
+        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+      </nav>
+      <button class="relative" style="outline-style:none;">
+        <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user">
+        <span
+          class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+      </button>
+    </div>
+
+  </header>
+  
+  <!-- main content -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+      <div class="flex items-center justify-between">
+        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">recent posts </h1>
+
+        <button class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:text-blue-500"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+      </div>
+
+
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div>
+          <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+            src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            alt="">
+
+          <div class="mt-8">
+
+            <div class="flex items-center justify-between mt-4">
+              <span class="text-blue-500 uppercase">category</span>
+              <div href="#" class="inline-block text-blue-500 underline hover:text-blue-400">
+                <button
+                  class="relative z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+
+            <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+              What do you want to know about UI
+            </h1>
+
+            <p class="mt-2 text-gray-500 dark:text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
+              recusandae nulla veritatis id tempore sapiente
+            </p>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center">
+                <button class="relative" style="outline-style:none;">
+                  <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user">
+                  <span
+                    class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                </button>
+                <div class="ml-3">
+                  <a href="#"
+                    class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                    John snow
+                  </a>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                </div>
+              </div>
+              <a href="#" class="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+            src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            alt="">
+
+          <div class="mt-8">
+            <div class="flex items-center justify-between mt-4">
+              <span class="text-blue-500 uppercase">category</span>
+              <div href="#" class="inline-block text-blue-500 underline hover:text-blue-400">
+                <button
+                  class="relative z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+              All the features you want to know</h1>
+
+            <p class="mt-2 text-gray-500 dark:text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
+              recusandae nulla veritatis id tempore sapiente
+            </p>
+
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center">
+                <button class="relative" style="outline-style:none;">
+                  <img class="w-10 h-10 rounded-full" src="/img/demo.png" alt="user">
+                  <span
+                    class="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                </button>
+                <div class="ml-3">
+                  <a href="#"
+                    class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                    Arthur Melo
+                  </a>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">February 1, 2022</p>
+                </div>
+              </div>
+              <a href="#" class="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+            src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+            alt="">
+
+          <div class="mt-8">
+            <div class="flex items-center justify-between mt-4">
+              <span class="text-blue-500 uppercase">category</span>
+              <div href="#" class="inline-block text-blue-500 underline hover:text-blue-400">
+                <button
+                  class="relative z-10 block p-2 text-gray-700 bg-white border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <h1 class="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+              Which services you get from Meraki UI
+            </h1>
+
+            <p class="mt-2 text-gray-500 dark:text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam est asperiores vel, ab animi
+              recusandae nulla veritatis id tempore sapiente
+            </p>
+
+            <div class="flex items-center justify-between mt-4">
+              <div>
+                <a href="#"
+                  class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:underline hover:text-gray-500">
+                  Tom Hank
+                </a>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400">February 19, 2022</p>
+              </div>
+
+              <a href="#" class="inline-block text-blue-500 underline hover:text-blue-400">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact form starts -->
+
+<!-- contact form ends here -->
+  <!-- Footer Starts -->
+
+  <footer class="text-gray-600 body-font" style="position: relative;left: 0;bottom: 0;width: 100%;">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <i class="fa-sharp fa-solid fa-blog fa-2x"></i>
+        <span class="ml-3 text-xl">Tailblocks</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020
+        Tailblocks —
+        <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer"
+          target="_blank">@knyttneve</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+</body>
+
+</html>
